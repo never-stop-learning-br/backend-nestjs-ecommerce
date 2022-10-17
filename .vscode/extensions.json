@@ -1,0 +1,19 @@
+{
+  "recommendations": [
+    "aaron-bond.better-comments",
+    "mikestead.dotenv",
+    "dracula-theme.theme-dracula",
+    "usernamehw.errorlens",
+    "unifiedjs.vscode-mdx",
+    "ue.alphabetical-sorter",
+    "streetsidesoftware.code-spell-checker-portuguese-brazilian",
+    "dzhavat.bracket-pair-toggler",
+    "adpyke.codesnap",
+    "editorconfig.editorconfig",
+    "eamodio.gitlens",
+    "oderwat.indent-rainbow",
+    "ms-vsliveshare.vsliveshare",
+    "esbenp.prettier-vscode",
+    "rangav.vscode-thunder-client"
+  ]
+}
