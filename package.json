@@ -4,7 +4,7 @@
   "description": "",
   "author": "Gabriel Corrêa Diniz",
   "private": true,
-  "license": "UNLICENSED",
+  "license": "MIT",
   "scripts": {
     "prepare": "husky install",
     "prebuild": "rimraf dist",
@@ -20,8 +20,8 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "prisma:generate": "prisma generate --schema=./src/prisma/schema.prisma",
-    "prisma:push": "prisma db push"
+    "prisma:generate": "prisma generate --schema=./src/lib/prisma/schema.prisma",
+    "prisma:push": "prisma db push --schema=./src/lib/prisma/schema.prisma"
   },
   "dependencies": {
     "@nestjs/common": "^8.0.0",
@@ -71,13 +71,20 @@
       "json",
       "ts"
     ],
+    "moduleNameMapper": {
+      "@database/(.*)": "<rootDir>/lib/prisma/$1"
+    },
     "rootDir": "src",
     "testRegex": ".*\\.spec\\.ts$",
     "transform": {
       "^.+\\.(t|j)s$": "ts-jest"
     },
     "collectCoverageFrom": [
-      "**/*.(t|j)s"
+      "**/*.(t|j)s",
+      "!**/*.module.(t|j)s",
+      "!main.(t|j)s",
+      "!lib/prisma/prisma.provider.ts",
+      "!lib/prisma/index.ts"
     ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
