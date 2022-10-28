@@ -31,7 +31,7 @@ module.exports = {
         newlinesBetween: 'always',
         groups: [
           'module',
-          '/^@(prisma-module)/', // add here the order imports
+          ['/^@(database)/'], // add here the order imports
           ['parent', 'sibling', 'index'],
         ],
         alphabetize: { order: 'asc', ignoreCase: true },

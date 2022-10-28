@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./src/",
     "paths": {
-      "@prisma-module/*": ["prisma/*"]
+      "@database/*": ["lib/prisma/*"]
     }
   }
 }
